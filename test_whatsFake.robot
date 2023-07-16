@@ -10,7 +10,6 @@ ${hint_expect}    To simulate a message, tap %s at the bottom of your screen.
 
 *** Keywords ***
 Abrir WhatsFake
-    #Open Application  http://localhost:4723    platformName=Android	    deviceName=Android Emulator	    appPackage=com.aymenlotfi70.whatsfake  	appActivity=com.aymenlotfi70.whatsfake.activities.MainActivity    automationName=UIAutomator2    #noReset=true
     Open Application  http://localhost:4723    automationName=UIAutomator2    platformName=Android    app=${ANDROID_APK}    appPackage=${PACKAGE}    appActivity=${ACTIVITY}
 
 Validar mensagem

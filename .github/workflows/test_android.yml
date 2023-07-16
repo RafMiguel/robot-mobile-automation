@@ -41,4 +41,4 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
-        script: ./robot test_whatsFake.robot
+        script: robot test_whatsFake.robot

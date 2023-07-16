@@ -11,7 +11,10 @@ jobs:
   build:
 
     runs-on: macos-latest
-
+    strategy: # we are using strategy if we need to run on parallel with different devices and version
+      matrix:
+        api-level: [25] #Google api level for example [25,23,28] 
+        target: [default]
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.11
@@ -34,8 +37,8 @@ jobs:
     - name: Run Appium Tests
       uses: reactivecircus/android-emulator-runner@v1 # install and create the Emulator
       with:
-        api-level: 29
-        target: default
+        api-level: ${{ matrix.api-level }}
+        target: ${{ matrix.target }}
         arch: x86_64
-        profile: Pixel 3a
+        profile: Nexus 6
         script: ./scripts/RunTest.sh

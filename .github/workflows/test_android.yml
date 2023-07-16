@@ -32,6 +32,7 @@ jobs:
     - name: Install and run Appium Server
       run: |
         chmod +x ./scripts/RunAppiumServer.sh # install and run appium server in the background
+        appium driver install uiautomator2
         ./scripts/RunAppiumServer.sh
         
     - name: Run Appium Tests

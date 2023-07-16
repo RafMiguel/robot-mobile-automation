@@ -38,4 +38,4 @@ jobs:
         target: default
         arch: x86_64
         profile: Pixel 3a
-        command: robot test_whatsFake.robot
+        script: ./scripts/RunTest.sh

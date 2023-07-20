@@ -4,8 +4,10 @@
 name: Teste de execução no emulador
 
 on:
+  schedule:
+    - cron: '0 0 *  * 1-5'
   push:
-    branches: [ "main",  "global_adjusts" ]
+      branches: [ "global_adjusts" ]
 
 jobs:
   build:

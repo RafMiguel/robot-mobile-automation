@@ -4,7 +4,7 @@ Library  AppiumLibrary
 *** Variables ***
 #CURDIR = Current Directory
 #EXECDIR = Root Directory
-${AVD}     Nexus_6_API_25
+#${AVD}     Nexus_6_API_25
 ${ROUTE}    http://localhost:4723
 ${AUTO_NAME}    UIAutomator2
 ${PLATFORM}    Android
@@ -15,4 +15,4 @@ ${ACTIVITY}    com.aymenlotfi70.whatsfake.activities.MainActivity
 
 *** Keywords ***
 Iniciar device e abrir o aplicativo
-    Open Application  ${ROUTE}    automationName=${AUTO_NAME}    platformName=${PLATFORM}    avd=${AVD}    app=${ANDROID_APK}    appPackage=${PACKAGE}    appActivity=${ACTIVITY}
+    Open Application  ${ROUTE}    automationName=${AUTO_NAME}    platformName=${PLATFORM}       app=${ANDROID_APK}    appPackage=${PACKAGE}    appActivity=${ACTIVITY}

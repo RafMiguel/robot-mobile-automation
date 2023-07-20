@@ -1,5 +1,6 @@
 #!/bin/bash
 set -ex
+npm install
 npm install -g appium
 appium -v
 appium driver install uiautomator2
